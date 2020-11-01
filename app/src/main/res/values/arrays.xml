@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="s_agency">
+        <item>건양대학교</item>
+        <item>대덕대학교</item>
+        <item>대전과학기술대학교</item>
+        <item>대전대학교</item>
+        <item>대전보건대학교</item>
+        <item>대전신학대학교</item>
+        <item>대전침례신학대학교</item>
+        <item>목원대학교</item>
+        <item>배재대학교</item>
+        <item>우송대학교</item>
+        <item>우송정보대학</item>
+        <item>을지대학교</item>
+        <item>충남대학교</item>
+        <item>한국폴리텍대학</item>
+        <item>한남대학교</item>
+        <item>한밭대학교</item>
+    </string-array>
+    <string-array name="oos_agency">
+        <item>한국장학재단</item>
+    </string-array>
+
+    <string-array name="type">
+        <item>성적우수</item>
+        <item>소득구분</item>
+        <item>외국인</item>
+        <item>장애인</item>
+        <item>기타</item>
+    </string-array>
+
+</resources>
