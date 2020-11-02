@@ -10,9 +10,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -67,8 +72,11 @@ public class SearchFragment extends Fragment {
     private Spinner typeSpinner;
 
     private String scGroup = "";
-    private String scAgency ="";
-    private String scType = "";
+
+    private ListView scholarshipListView;
+    private ScholarshipListAdapter adapter;
+    private List<Scholarship> scholarshipList;
+
 
     @Override
     public void onActivityCreated(Bundle b) {
@@ -97,8 +105,29 @@ public class SearchFragment extends Fragment {
                     agencyAdapter = ArrayAdapter.createFromResource(getActivity(),R.array.oos_agency, android.R.layout.simple_spinner_dropdown_item);
                     agencySpinner.setAdapter(agencyAdapter);
                 }
+
             }
         });
+
+        scholarshipListView = (ListView) getView().findViewById(R.id.scholarshipListView);
+        scholarshipList = new ArrayList<Scholarship>();
+
+        scholarshipList.add(new Scholarship(1,"교외","한국장학재단","소득구분","국가장학금 1유형","4년제,2~3년제","제한없음","https://www.kosaf.go.kr/"));
+        scholarshipList.add(new Scholarship(2,"교외","한국장학재단","소득구분","국가장학금 2유형","4년제,2~3년제","제한없음","https://www.kosaf.go.kr/"));
+        scholarshipList.add(new Scholarship(3,"교내","한밭대학교","성적우수","성적우수A","4년제","제한없음","https://www.hanbat.ac.kr/kor/sub06_0402.do"));
+        scholarshipList.add(new Scholarship(4,"교내","한밭대학교","소득구분","생활보호","4년제","제한없음","https://www.hanbat.ac.kr/kor/sub06_0402.do"));
+
+        adapter = new ScholarshipListAdapter(getContext().getApplicationContext(), scholarshipList);
+        scholarshipListView.setAdapter(adapter);
+
+        /*Button searchButton = (Button) getView().findViewById(R.id.searchButton);
+        searchButton.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+
+            }
+        });*/
     }
 
     @Override
