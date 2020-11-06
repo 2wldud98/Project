@@ -6,11 +6,21 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.content.ContentUris;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.Toast;
+
+import org.xmlpull.v1.XmlPullParser;
+import org.xmlpull.v1.XmlPullParserFactory;
+
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+
+import static android.util.Log.*;
 
 public class Main2Activity extends AppCompatActivity {
 
@@ -18,6 +28,7 @@ public class Main2Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
+
 
         final Button searchButton = (Button)findViewById(R.id.searchButton);
         final Button starButton = (Button)findViewById(R.id.starButton);
@@ -49,6 +60,6 @@ public class Main2Activity extends AppCompatActivity {
                 fragmentTransaction.commit();
             }
         });
-    }
 
+    }
 }

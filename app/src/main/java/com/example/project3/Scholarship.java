@@ -9,8 +9,8 @@ public class Scholarship {
     String scholarName;//장학명
     String scholarUniv;//대학구분
     String scholarGrade;//학과
-    //장학혜택
-    //성적기준
+    String scholarBenefit;//장학혜택
+    String scholarStandard;//성적기준
     String scholarLink;//링크
 
     public int getScholarID() {
@@ -69,6 +69,22 @@ public class Scholarship {
         this.scholarGrade = scholarGrade;
     }
 
+    public String getScholarBenefit() {
+        return scholarBenefit;
+    }
+
+    public void setScholarBenefit(String scholarBenefit) {
+        this.scholarBenefit = scholarBenefit;
+    }
+
+    public String getScholarStandard() {
+        return scholarStandard;
+    }
+
+    public void setScholarStandard(String scholarStandard) {
+        this.scholarStandard = scholarStandard;
+    }
+
     public String getScholarLink() {
         return scholarLink;
     }
@@ -77,7 +93,7 @@ public class Scholarship {
         this.scholarLink = scholarLink;
     }
 
-    public Scholarship(int scholarID, String scholarGroup, String scholarAgency, String scholarType, String scholarName, String scholarUniv, String scholarGrade, String scholarLink) {
+    public Scholarship(int scholarID, String scholarGroup, String scholarAgency, String scholarType, String scholarName, String scholarUniv, String scholarGrade, String scholarBenefit, String scholarStandard, String scholarLink) {
         this.scholarID = scholarID;
         this.scholarGroup = scholarGroup;
         this.scholarAgency = scholarAgency;
@@ -85,7 +101,8 @@ public class Scholarship {
         this.scholarName = scholarName;
         this.scholarUniv = scholarUniv;
         this.scholarGrade = scholarGrade;
+        this.scholarBenefit = scholarBenefit;
+        this.scholarStandard = scholarStandard;
         this.scholarLink = scholarLink;
     }
-
 }

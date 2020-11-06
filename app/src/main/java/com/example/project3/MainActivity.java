@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ListActivity;
 import android.content.Intent;
+import android.content.res.AssetManager;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
@@ -15,6 +17,14 @@ import android.widget.ImageView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 import android.widget.ViewFlipper;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -108,7 +118,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
     }
-    
+
     private long lastTimeBackPressed;
     @Override
     public void onBackPressed(){
@@ -120,4 +130,5 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this, "'뒤로' 버튼을 한 번 더 눌러 종료합니다.",Toast.LENGTH_SHORT);
         lastTimeBackPressed = System.currentTimeMillis();
     }
+
 }
